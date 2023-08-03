@@ -53,28 +53,39 @@ input[type=text], input[type=email], input[type=password] {
 #nameError{
 	color: red;
 }
+.error{
+	justify-content: center;
+	color: red;
+}
 
     </style>
 </head>
 <body>
 	<div class="container">
+<<<<<<< Updated upstream
 		<form  action="./main.html">
+=======
+		<form  onsubmit="return handleLogin()"  action="./login.html" >
+>>>>>>> Stashed changes
 			<h2>Sign Up</h2>
-			<label>Username</label>
-			<input type="text" placeholder="Enter Username" name="username" required id="username">
+			<label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <div id="usernameError" class="error"></div> <!-- Error message container for username -->
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <div id="passwordError" class="error"></div> <!-- Error message container for password -->
 
-			<label>Password</label>
-			<input type="password" placeholder="Enter Password" name="password" required id="pwd">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+        <div id="confirmPasswordError" class="error"></div>
 
-			<label>Confirm Password</label>
-			<input type="password" placeholder="Confirm Password" name="confirmPassword" required id="cpwd">
-
-			<span id="nameError" class="error"></span>
-
-			<button type="submit" class="btn" onclick="validRegistor()">Sign Up</button>
+			<button type="submit" class="btn" >Sign Up</button>
 		</form> 
 	</div>
 
-	<script src="./main.js"></script>
+
+	
+	<script src="./logic.js"></script>
 </body>
 </html>
