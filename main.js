@@ -1,3 +1,8 @@
+import User from './User.js'
+
+
+let users = [];
+
 function validRegistor(){
     let username=document.getElementById('username').value;
     let pwd=document.getElementById('pwd').value;
@@ -28,4 +33,7 @@ function validRegistor(){
       document.getElementById('nameError').innerHTML(`${errorname}`)
     
 }
+  let user = new User(username,pwd);
+  users.push(user);
+
 }
