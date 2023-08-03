@@ -1,44 +1,5 @@
 
-function handleLogin1() {
- 
 
-  let username=document.getElementById('username').value;
-  let pwd=document.getElementById('pwd').value;
-  let cpwd=document.getElementById('cpwd').value;
-
-  
-  let errormessage='';
-  const regex = /^[a-zA-Z0-9_-]{3,20}$/;
-  const pwdregex = /^.{5,20}$/;
-
-  if (!regex.test(username)) {
-    errormessage.concat('invalid username');
-      
-    }
-    
-    if (pwdregex.test(pwd) ) 
-     {
-       if(pwd!==cpwd)
-       {
-        errormessage.concat("entered ummatch pwd ")
-          
-       }
-     
-    else
-    {
-       
-      errorname.concat("invalid pwd")
-      
-    }
-    document.getElementById('nameError').innerHTML
-  
-
-  // Return false to prevent form submission (since we already handled it)
- 
-}}
-
-
-// logic.js
 
 function handleLogin() {
  
@@ -82,11 +43,6 @@ function handleLogin() {
       return false;
   }
 
-  // Do your login logic here (e.g., API call to authenticate the user)
-  // For demonstration purposes, let's just log the username and password
-  console.log("Username:", usernameInput.value);
-  console.log("Password:", passwordInput.value);
-
-  // Return false to prevent form submission (since we already handled it)
+  
   return true;
 }
